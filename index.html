@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: Sans-Serif;
+    }
+    body{
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+    }
+    .container{
+        width: auto;
+        height: auto;
+        margin: auto;
+        background-color: black;
+        border: 2px solid orange;
+        color: white;
+        font-weight: bold;
+    }
+    nav button{
+        background-color: black;
+        border: 2px solid orange;
+        color: white;
+        font-weight: bold;
+        margin: 2px;
+        padding: 0px;
+        width: 90px;
+        height: 22.5px;
+    }
+    .page4{
+        width: 25px;
+        height: 22.5px;
+    }
+    nav{
+        margin: 5px;
+    }
+    .active{
+        display: block;
+    }
+    section{
+        display: none;
+    }
+    #home{
+		  background-image: url("computers.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          margin: 0px;
+          padding: 0px;
+          width: auto;
+          height: auto;
+          min-height: 100vh;
+    }
+    main{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    h4, h3, p{
+        margin: 0px;
+        padding: 0px;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0px;
+        margin: 5px;
+    }
+    article{
+        background-color: #2F4262;
+        margin: 0px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .ca{
+		  background-image: url("ca.png");
+		  background-size: cover;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  margin: 0px;
+		  padding: 0px;
+		  color: grey;
+    }
+    .wd{
+		  background-image: url("wd.png");
+		  background-size: cover;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  margin: 0px;
+		  padding: 0px;
+		  color: grey;
+		  height: 250px;
+    }
+    .cs{
+		  background-image: url("cs.png");
+		  background-size: cover;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  margin: 0px;
+		  padding: 0px;
+		  color: grey;
+    }
+    .sd{
+		  background-image: url("sa.png");
+		  background-size: cover;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  margin: 0px;
+		  padding: 0px;
+		  color: black;
+		  background-color: grey;
+		  height: 250px;
+    }
+    #donate.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+    }
+    #donate input{
+        background-color: black;
+        border: 2px solid orange;
+        margin: 5px;
+        color: white;
+    }
+    #about.active{
+		  background-image: url("about.png");
+		  background-size: cover;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  margin: 0px;
+		  padding: 0px;
+		  color: black;
+		  background-color: grey;
+		  height: 250px;
+    }
+   body.light,
+body.light .container,
+body.light nav button,
+body.light #donate input {
+    background-color: white;
+    color: orange;
+    }
+    #settings button{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        margin: auto;
+        background-color: orange;
+        border: 2px solid orange;
+        color: white;
+    }
+</style>
+<body>
+    <div class="container">
+        <nav>
+            <button class="page1" onclick="showPage('home')">Home</button>
+            <button class="page2" onclick="showPage('about')">About us</button>
+            <button class="page3"  onclick="showPage('donate')">Donate</button>
+            <button class="page4" onclick="showPage('settings')">⚙️</button>
+        </nav>
+        
+        <section id="home" class="active">
+            <h4>Welcome to the website</h4>
+            <p>Enjoy the experience that will happen in this website and gain knowledge about computers!</p>
+            <br>
+                <h4>Explore</h4>
+                <p>Choose a series you want to learn below or explore the website using the navigation bar</p>
+                <br>
+                <div class="cards">
+                    
+                    <article class="ca">
+                        <span>
+                        <h3></h3>
+                        <br>
+                        <p></p>
+                        </span>
+                    </article>
+                    
+                    <article class="wd">
+                        <h3>Website Development</h3>
+                        <br>
+                        <p></p>
+                    </article>
+                    
+                    <article class="sd">
+                        <h3></h3>
+                        <br>
+                        <p></p>
+                    </article>
+                    
+                    <article class="cs">
+                        <h3></h3>
+                        <br>
+                        <p></p>
+                    </article>
+                    
+                </div>
+        </section>
+        
+        <section id="about">
+            <h1>Welcome to the about us page!</h1>
+            <ul>
+                <li>Developers: Muhluleri</li>
+                <li>Source: GitHub</li>
+                <li>Coding Languages:HTML, CSS & JS</li>
+                <li>Date of release:</li>
+                <li>Date of Development: 20 November 2026</li>
+                <li>Contact: 062 504 8036</li>
+            </ul>
+        </section>
+        
+        <section id="donate">
+            <h1>Choose your price of donation!</h1>
+            <input type="number">
+            <input type="submit">
+        </section>
+        <section id="settings">
+            <button onclick="changecolor('.container')">Theme</button>
+        </section>
+    </div>
+    <script>
+    function showPage(target) {
+        let selections = document.getElementsByTagName('section');
+        for (let i = 0; i < selections.length; i++) {
+            selections[i].classList.remove('active');
+        }
+        document.getElementById(target).classList.add('active');
+    }
+    function changecolor(){
+        document.body.classList.toggle('light');
+}
+</script>
+
+</body>
+</html>
